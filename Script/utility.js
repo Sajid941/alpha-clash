@@ -17,3 +17,18 @@ function setAlphabetBgColor(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
+function removeAlphabetBgColor(elementId){
+    const element=document.getElementById(elementId);
+    element.classList.remove('bg-orange-400');
+}
+
+function getElementValueById(elementId){
+    const element=document.getElementById(elementId);
+    const elementValueText=element.innerText;
+    const value=parseInt(elementValueText);
+    return value
+}
+function setElementValuebyId(elementId,value){
+    const element=document.getElementById(elementId);
+    element.innerText=value;
+}
