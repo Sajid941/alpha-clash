@@ -16,15 +16,15 @@
 <body class="font-poppins">
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center  text-white flex justify-center">
         <!-- Home section  -->
-        <section class="home  hidden">
+        <section id="home-section" class="">
             <div class="flex flex-col items-center min-h-screen justify-center gap-10">
                 <h1 class="text-9xl uppercase font-anton">Alphabet Clash</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white">Play Now</button>
+                <button onclick="play()" class="btn bg-white">Play Now</button>
             </div>
         </section>
         <!-- PlayGroun section-->
-        <section class="play-ground">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col gap-10 mt-20">
                 <!-- screen -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">
@@ -32,43 +32,43 @@
                         <p class="bg-[#2F2941] rounded-b-xl px-6 pb-4">Don't watch keyboard  while playing...</p>
                     </div>
                     <div class="flex justify-center ">
-                        <p class="text-9xl font-bold  text-black">Y</p>
+                        <p id="current-alphabet" class="text-9xl font-bold  text-black uppercase">Y</p>
                     </div>
                 </div>
                 <!-- keyboard -->
                 <div class="text-black">
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd rounded-md">w</kbd>
-                        <kbd class="kbd rounded-md">e</kbd>
-                        <kbd class="kbd rounded-md">q</kbd>
-                        <kbd class="kbd rounded-md">r</kbd>
-                        <kbd class="kbd rounded-md">t</kbd>
-                        <kbd class="kbd rounded-md">y</kbd>
-                        <kbd class="kbd rounded-md">u</kbd>
-                        <kbd class="kbd rounded-md">i</kbd>
-                        <kbd class="kbd rounded-md">o</kbd>
-                        <kbd class="kbd rounded-md">p</kbd>
+                        <kbd id="w" class="kbd rounded-md">w</kbd>
+                        <kbd id="e" class="kbd rounded-md">e</kbd>
+                        <kbd id="q" class="kbd rounded-md">q</kbd>
+                        <kbd id="r" class="kbd rounded-md">r</kbd>
+                        <kbd id="t" class="kbd rounded-md">t</kbd>
+                        <kbd id="y" class="kbd rounded-md">y</kbd>
+                        <kbd id="u" class="kbd rounded-md">u</kbd>
+                        <kbd id="i" class="kbd rounded-md">i</kbd>
+                        <kbd id="o" class="kbd rounded-md">o</kbd>
+                        <kbd id="p" class="kbd rounded-md">p</kbd>
                       </div> 
                       <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd rounded-md">a</kbd>
-                        <kbd class="kbd rounded-md">s</kbd>
-                        <kbd class="kbd rounded-md">d</kbd>
-                        <kbd class="kbd rounded-md">f</kbd>
-                        <kbd class="kbd rounded-md">g</kbd>
-                        <kbd class="kbd rounded-md">h</kbd>
-                        <kbd class="kbd rounded-md">j</kbd>
-                        <kbd class="kbd rounded-md">k</kbd>
-                        <kbd class="kbd rounded-md">l</kbd>
+                        <kbd id="a" class="kbd rounded-md">a</kbd>
+                        <kbd id="s" class="kbd rounded-md">s</kbd>
+                        <kbd id="d" class="kbd rounded-md">d</kbd>
+                        <kbd id="f" class="kbd rounded-md">f</kbd>
+                        <kbd id="g" class="kbd rounded-md">g</kbd>
+                        <kbd id="h" class="kbd rounded-md">h</kbd>
+                        <kbd id="j" class="kbd rounded-md">j</kbd>
+                        <kbd id="k" class="kbd rounded-md">k</kbd>
+                        <kbd id="l" class="kbd rounded-md">l</kbd>
                       </div> 
                       <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd rounded-md">z</kbd>
-                        <kbd class="kbd rounded-md">x</kbd>
-                        <kbd class="kbd rounded-md">c</kbd>
-                        <kbd class="kbd rounded-md">v</kbd>
-                        <kbd class="kbd rounded-md">b</kbd>
-                        <kbd class="kbd rounded-md">n</kbd>
-                        <kbd class="kbd rounded-md">m</kbd>
-                        <kbd class="kbd rounded-md">/</kbd>
+                        <kbd id="z" class="kbd rounded-md">z</kbd>
+                        <kbd id="x" class="kbd rounded-md">x</kbd>
+                        <kbd id="c" class="kbd rounded-md">c</kbd>
+                        <kbd id="v" class="kbd rounded-md">v</kbd>
+                        <kbd id="b" class="kbd rounded-md">b</kbd>
+                        <kbd id="n" class="kbd rounded-md">n</kbd>
+                        <kbd id="m" class="kbd rounded-md">m</kbd>
+                        <kbd id="/" class="kbd rounded-md">/</kbd>
                       </div>
                 </div>
                 <!-- keyborad end -->
@@ -88,11 +88,20 @@
             </div>
         </section>
         <!-- PlayGround section end -->
-        <section class="score">
-
+        <!-- secore section start -->
+        <section class="score flex items-center hidden ">
+            <div class="text-center bg-[#FFFFFF33] p-6 rounded-2xl space-y-5"> 
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score : </span>
+                    <span>14</span>
+                </h1>
+                <button class="btn rounded-lg font-medium">Play Again</button>
+                <p>Practice will make you a Pro</p>
+            </div>
         </section>
     </main>
     <script src="Script/script.js"></script>
+    <script src="Script/utility.js"></script>
 </body>
 
 </html>
