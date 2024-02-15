@@ -1,9 +1,22 @@
 function play(){
     //play button event
     hideElementById('home-section');
+    hideElementById('score-section')
     showElementById('play-ground');
+    //restore score & life
+    setElementValuebyId('current-score',0);
+    setElementValuebyId('current-life',5)
     //called countinue function
     continueGame();
+}
+function gameOver(){
+    hideElementById('play-ground');
+    showElementById('score-section');
+    const currentScore = getElementValueById('current-score');
+    setElementValuebyId('final-score',currentScore);
+    const currentAlphabet = getElementTextById('current-alphabet');
+    removeAlphabetBgColor(currentAlphabet)
+
 }
 function continueGame(){
     //created radomly alphabet
@@ -32,7 +45,10 @@ function keyBoardButtonPress(event){
     else{
         const life=getElementValueById('current-life');
         const updatedLife=life-1;
-        setElementValuebyId('current-life',updatedLife)
+        setElementValuebyId('current-life',updatedLife);
+        if(updatedLife === 0){
+            gameOver();
+        }
     }
 
 }

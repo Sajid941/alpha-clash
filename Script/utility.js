@@ -32,3 +32,8 @@ function setElementValuebyId(elementId,value){
     const element=document.getElementById(elementId);
     element.innerText=value;
 }
+function getElementTextById(elementId){
+    const element=document.getElementById(elementId);
+    const elementValueText=element.innerText;
+    return elementValueText;
+}
